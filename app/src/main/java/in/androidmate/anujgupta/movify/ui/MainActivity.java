@@ -2,11 +2,16 @@ package in.androidmate.anujgupta.movify.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import butterknife.BindView;
 import in.androidmate.anujgupta.movify.R;
 
 public class MainActivity extends AppCompatActivity implements MainViewInterface {
+
+    @BindView(R.id.rvMovies)
+    RecyclerView rvMovies;
 
     MainPresenter mainPresenter;
     @Override
