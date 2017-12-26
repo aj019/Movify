@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.Movies> {
 
 
+
     @Override
     public Movies onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
