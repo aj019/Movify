@@ -1,5 +1,6 @@
 package in.androidmate.anujgupta.movify.ui.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import butterknife.ButterKnife;
 import in.androidmate.anujgupta.movify.R;
 import in.androidmate.anujgupta.movify.adapters.MoviesAdapter;
 import in.androidmate.anujgupta.movify.models.MovieResponse;
+import in.androidmate.anujgupta.movify.ui.search.SearchActivity;
 
 public class MainActivity extends AppCompatActivity implements MainViewInterface {
 
@@ -96,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         int id = item.getItemId();
         if(id == R.id.search){
             showToast("Search Clicked");
+            Intent i = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
