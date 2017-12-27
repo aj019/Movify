@@ -18,5 +18,15 @@
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movify"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                />
+
+        </android.support.v7.widget.Toolbar>
 </android.support.constraint.ConstraintLayout>
