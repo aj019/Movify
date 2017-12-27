@@ -1,17 +1,16 @@
-package in.androidmate.anujgupta.movify.ui;
+package in.androidmate.anujgupta.movify.ui.main;
 
 
 import android.util.Log;
 
-import in.androidmate.anujgupta.movify.R;
 import in.androidmate.anujgupta.movify.models.MovieResponse;
 import in.androidmate.anujgupta.movify.network.NetworkClient;
 import in.androidmate.anujgupta.movify.network.NetworkInterface;
+import in.androidmate.anujgupta.movify.ui.main.MainPresenterInterface;
+import in.androidmate.anujgupta.movify.ui.main.MainViewInterface;
 import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
