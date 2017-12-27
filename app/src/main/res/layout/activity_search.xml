@@ -4,11 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="in.androidmate.anujgupta.movify.ui.search.SearchActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvQueryResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
