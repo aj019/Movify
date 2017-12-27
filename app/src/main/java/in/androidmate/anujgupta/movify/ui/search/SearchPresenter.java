@@ -54,9 +54,7 @@ public class SearchPresenter implements SearchPresenterInterface {
                     @Override
                     public Observable<MovieResponse> apply(@NonNull String s) throws Exception {
                         return NetworkClient.getRetrofit().create(NetworkInterface.class)
-                                .getMovies("004cbaf19212094e32aa9ef6f6577f22")
-                                .subscribeOn(Schedulers.io())
-                                .observeOn(AndroidSchedulers.mainThread());
+                                .getMoviesBasedOnQuery("004cbaf19212094e32aa9ef6f6577f22",s);
                     }
                 })
                 .subscribeOn(Schedulers.io())
@@ -92,9 +90,9 @@ public class SearchPresenter implements SearchPresenterInterface {
         return new DisposableObserver<MovieResponse>() {
 
             @Override
-            public void onNext(@NonNull MovieResponse movieResponse) {
-                Log.d(TAG,"OnNext"+movieResponse.getTotalResults());
-                searchviewInterface.displayResult(movieResponse);
+            public void onNext(@NonNull MovieResponse MovieResponse) {
+                Log.d(TAG,"OnNext"+MovieResponse.getTotalResults());
+                searchviewInterface.displayResult(MovieResponse);
             }
 
             @Override

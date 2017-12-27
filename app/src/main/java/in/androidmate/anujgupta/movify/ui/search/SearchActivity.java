@@ -89,7 +89,6 @@ public class SearchActivity extends AppCompatActivity implements SearchViewInter
     public void displayResult(MovieResponse movieResponse) {
         adapter = new MoviesAdapter(movieResponse.getResults(),SearchActivity.this);
         rvQueryResult.setAdapter(adapter);
-
     }
 
     @Override
