@@ -4,7 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -18,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     private String TAG = "MainActivity";
     RecyclerView.Adapter adapter;
     MainPresenter mainPresenter;
@@ -29,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         ButterKnife.bind(this);
 
         //rvMovies = (RecyclerView) findViewById(R.id.rvMovies);
-
         setupMVP();
         setupViews();
         getMovieList();
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     }
 
     private void setupViews(){
+
+        setSupportActionBar(toolbar);
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -77,4 +83,21 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if(id == R.id.search){
+            showToast("Search Clicked");
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
