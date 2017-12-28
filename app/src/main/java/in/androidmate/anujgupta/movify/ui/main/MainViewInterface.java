@@ -1,4 +1,4 @@
-package in.androidmate.anujgupta.movify.ui;
+package in.androidmate.anujgupta.movify.ui.main;
 
 import in.androidmate.anujgupta.movify.models.MovieResponse;
 
