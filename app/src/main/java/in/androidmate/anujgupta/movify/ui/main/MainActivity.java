@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
 
+    //Added in Part 2 of the series
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     private String TAG = "MainActivity";
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     }
 
     private void setupViews(){
-
+        //Added in Part 2 of the series
         setSupportActionBar(toolbar);
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
     }
 
-
+    //Added in Part 2 of the series
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
