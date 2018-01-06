@@ -10,6 +10,8 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -22,6 +24,9 @@ public class SearchActivity extends AppCompatActivity implements SearchViewInter
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
     @BindView(R.id.rvQueryResult)
     RecyclerView rvQueryResult;
@@ -94,5 +99,15 @@ public class SearchActivity extends AppCompatActivity implements SearchViewInter
     @Override
     public void displayError(String s) {
         showToast(s);
+    }
+
+    @Override
+    public void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgressBar() {
+        progressBar.setVisibility(View.GONE);
     }
 }

@@ -58,6 +58,7 @@ public class MainPresenter implements MainPresenterInterface {
             @Override
             public void onComplete() {
                 Log.d(TAG,"Completed");
+                mvi.hideProgressBar();
             }
         };
     }

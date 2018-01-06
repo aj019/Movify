@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
     //Added in Part 2 of the series
     @BindView(R.id.toolbar)
@@ -65,6 +70,16 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
     @Override
     public void showToast(String str) {
         Toast.makeText(MainActivity.this,str,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgressBar() {
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
